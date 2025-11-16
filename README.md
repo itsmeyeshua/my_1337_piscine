@@ -6,8 +6,10 @@ It also includes **rush00**, a collaborative weekend project where I worked in a
 
 ## Repository Structure
 
+```
 ├── c00/ - c11/     # Daily exercises by subject
 └── rush00/         # Team weekend project
+```
 
 ## Highlights by Day
 
