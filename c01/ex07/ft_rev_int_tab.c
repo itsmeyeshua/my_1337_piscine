@@ -26,3 +26,27 @@ void	ft_rev_int_tab(int *tab, int size)
 		i++;
 	}
 }
+
+#include <stdio.h>
+int main()
+{
+	int arr_num[10] = {0,1,2,3,4,5,6,7,8,9};
+
+	printf("array numbers before reverse int tab: [");
+	for (int i = 0; i < 10; i++) {
+		if (i != 9)
+			printf("%d ", arr_num[i]);
+		else
+			printf("%d]\n", arr_num[i]);
+	}
+
+	ft_rev_int_tab(arr_num, 10);
+	printf("array numbers after reverse int tab : [");
+	for (int i = 0; i < 10; i++) {
+		if (i != 9)
+			printf("%d ", arr_num[i]);
+		else
+			printf("%d]\n", arr_num[i]);
+	}
+	return 0;
+}

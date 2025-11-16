@@ -91,3 +91,15 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	}
 	return (addr);
 }
+
+#include <stdio.h>
+#include <string.h>
+int main(int ac, char **av)
+{
+	if (ac != 2) {
+		fprintf(stderr, "Ex: ./ft_print_memory \"1337 Future Is Loading...\"");
+		return 1;
+	}
+	ft_print_memory(av[1], strlen(av[1]));
+	return 0;
+}

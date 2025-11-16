@@ -22,3 +22,11 @@ int	ft_str_is_uppercase(char *str)
 	else
 		return (0);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	printf("\"HELLO\" is uppercase? %d\n", ft_str_is_uppercase("HELLO"));
+	printf("\"Hello\" is uppercase? %d\n", ft_str_is_uppercase("Hello"));
+	return 0;
+}

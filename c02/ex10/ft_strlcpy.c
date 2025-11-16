@@ -30,3 +30,16 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	return (src_len);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	char src[] = "Hello, 42!";
+	char dest[50];
+	unsigned int len;
+
+	len = ft_strlcpy(dest, src, 6);
+	printf("Copied string: %s\n", dest);
+	printf("Length of src: %u\n", len);
+	return 0;
+}

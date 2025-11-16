@@ -32,3 +32,18 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[i] = '\0';
 	return (len_dest + len_src);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	char dest[20] = "Hello, ";
+	char src[] = "World!";
+	unsigned int result;
+
+	printf("Before strlcat: %s\n", dest);
+	result = ft_strlcat(dest, src, 15);
+	printf("After strlcat : %s\n", dest);
+	printf("Returned length: %u\n", result);
+
+	return 0;
+}

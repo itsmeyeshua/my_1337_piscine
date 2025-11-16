@@ -21,3 +21,19 @@ void	ft_foreach(int *tab, int length, void (*f)(int))
 		i++;
 	}
 }
+
+#include <stdio.h>
+void	print_int(int n)
+{
+	printf("%d ", n);
+}
+
+int	main(void)
+{
+	int	tab[] = {1, 2, 3, 4, 5};
+	int	length = 5;
+
+	ft_foreach(tab, length, &print_int);
+	printf("\n");
+	return (0);
+}

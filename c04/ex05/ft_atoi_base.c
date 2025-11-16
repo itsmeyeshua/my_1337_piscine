@@ -109,3 +109,14 @@ int	ft_atoi_base(char *str, char *base)
 		num = ft_atoi(str, len_str, base, len_base);
 	return (num);
 }
+
+#include <stdio.h>
+int main(int ac, char **av)
+{
+	if  (ac != 3) {
+		fprintf(stderr, "Ex: ./ft_atoi_base \"10001\" \"01\"");
+		return 1;
+	}
+	printf("atoi_base(\"%s\", \"%s\") = %d\n", av[1], av[2], ft_atoi_base(av[1], av[2]));
+	return 0;
+}

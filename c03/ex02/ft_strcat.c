@@ -24,3 +24,15 @@ char	*ft_strcat(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	char str1[50] = "Hello, ";
+	char str2[] = "World!";
+
+	printf("Before ft_strcat: %s\n", str1);
+	ft_strcat(str1, str2);
+	printf("After ft_strcat : %s\n", str1);
+	return 0;
+}

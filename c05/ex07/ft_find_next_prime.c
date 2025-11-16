@@ -34,3 +34,13 @@ int	ft_find_next_prime(int nb)
 		nb++;
 	return (nb);
 }
+
+
+#include <stdio.h>
+int main(void)
+{
+	int numbers[] = {-1, 0, 1, 2, 3, 14, 17, 20};
+	for (int i = 0; i < 8; i++)
+		printf("ft_find_next_prime(%d) = %d\n", numbers[i], ft_find_next_prime(numbers[i]));
+	return 0;
+}

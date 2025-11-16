@@ -23,3 +23,15 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	char src[] = "Hello, world!";
+	char dest[50];
+
+	ft_strcpy(dest, src);
+	printf("src: %s\n", src);
+	printf("dest: %s\n", dest);
+	return 0;
+}

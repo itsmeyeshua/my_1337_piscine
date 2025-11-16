@@ -11,8 +11,19 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
+}
+
+int main() 
+{
+	int number = 1337;
+	printf("number before calling ft_ft() = %d\n", number);
+
+	ft_ft(&number);
+	printf("number after calling ft_ft() = %d\n", number);
+	return (1);
 }

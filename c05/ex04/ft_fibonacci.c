@@ -18,3 +18,12 @@ int	ft_fibonacci(int index)
 		return (index);
 	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
+
+
+#include <stdio.h>
+int main(void)
+{
+	for (int i = -1; i <= 10; i++)
+		printf("ft_fibonacci(%d) = %d\n", i, ft_fibonacci(i));
+	return 0;
+}

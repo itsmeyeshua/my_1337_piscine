@@ -43,6 +43,10 @@ void	print_array(char **arr)
 
 int	main(int ac, char **av)
 {
+	if (ac < 2) {
+		write(2, "Ex: ./ft_sort_params param1 param2\n", 37);
+		return 1;
+	}
 	int		size;
 	int		i;
 	char	*tmp;

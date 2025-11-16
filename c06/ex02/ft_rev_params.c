@@ -14,6 +14,10 @@
 
 int	main(int argc, char **argv)
 {
+	if (argc < 2) {
+		write(2, "Ex: ./ft_rev_params param1 param2\n", 37);
+		return 1;
+	}
 	int	i;
 	int	j;
 

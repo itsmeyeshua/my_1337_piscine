@@ -24,3 +24,16 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i++] = '\0';
 	return (dest);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	char src[] = "42School";
+	char dest[50];
+
+	ft_strncpy(dest, src, 5);
+	dest[5] = '\0';
+	printf("src: %s\n", src);
+	printf("dest (first 5 chars): %s\n", dest);
+	return 0;
+}

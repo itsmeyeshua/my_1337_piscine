@@ -21,3 +21,16 @@ int	ft_strlen(char *str)
 		size++;
 	return (size);
 }
+
+
+#include <stdio.h>
+int main(int ac, char **av)
+{
+	if (ac != 2) {
+		fprintf(stderr, "Ex: ./ft_strlen string\n");
+		return 1;
+	}
+
+	printf("len of \"%s\" is %d\n", av[1], ft_strlen(av[1]));
+	return 0;
+}

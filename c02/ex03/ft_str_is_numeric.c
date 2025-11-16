@@ -22,3 +22,11 @@ int	ft_str_is_numeric(char *str)
 	else
 		return (0);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	printf("\"12345\" is numeric? %d\n", ft_str_is_numeric("12345"));
+	printf("\"12a45\" is numeric? %d\n", ft_str_is_numeric("12a45"));
+	return 0;
+}

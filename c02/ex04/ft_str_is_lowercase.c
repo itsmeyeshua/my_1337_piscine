@@ -22,3 +22,11 @@ int	ft_str_is_lowercase(char *str)
 	else
 		return (0);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	printf("\"hello\" is lowercase? %d\n", ft_str_is_lowercase("hello"));
+	printf("\"Hello\" is lowercase? %d\n", ft_str_is_lowercase("Hello"));
+	return 0;
+}

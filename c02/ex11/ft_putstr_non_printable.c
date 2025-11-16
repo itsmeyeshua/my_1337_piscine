@@ -37,3 +37,10 @@ void	ft_putstr_non_printable(char *str)
 		i++;
 	}
 }
+
+int main(void)
+{
+	char str[] = "Hello\x01\x02World\n";
+	ft_putstr_non_printable(str);
+	return 0;
+}

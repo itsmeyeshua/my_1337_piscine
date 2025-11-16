@@ -23,3 +23,15 @@ char	*ft_strlowcase(char *str)
 	}
 	return (str);
 }
+
+#include <stdio.h>
+int main(int ac, char **av)
+{
+	if (ac < 2) {
+		fprintf(stderr, "Ex: ./ft_strlowcase string1 string2");
+		return 1;
+	}
+	for (int i = 1; av[i]; i++)
+		printf("%s\n", ft_strlowcase(av[i]));
+	return 0;
+}

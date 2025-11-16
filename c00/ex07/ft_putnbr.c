@@ -36,3 +36,9 @@ void	ft_putnbr(int nb)
 	while (i > 0)
 		write(1, &arr_nums[--i], 1);
 }
+
+int main()
+{
+	ft_putnbr(12);
+	return 0;
+}

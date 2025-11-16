@@ -25,3 +25,12 @@ int	ft_sqrt(int nb)
 	}
 	return (0);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	int numbers[] = {0, 1, 2, 4, 9, 10, 16, 20};
+	for (int i = 0; i < 8; i++)
+		printf("ft_sqrt(%d) = %d\n", numbers[i], ft_sqrt(numbers[i]));
+	return 0;
+}

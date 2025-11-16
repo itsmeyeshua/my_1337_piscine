@@ -61,3 +61,20 @@ void	ft_sort_string_tab(char **tab)
 		i++;
 	}
 }
+
+
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	if (ac < 2) {
+		fprintf(stderr, "Ex: ./ft_sort_string_tab zakaria guellouch");
+		return 1;
+	}
+	char **tab = &av[1];
+	int i = 0;
+
+	ft_sort_string_tab(tab);
+	while (tab[i])
+		printf("%s\n", tab[i++]);
+	return (0);
+}

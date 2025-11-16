@@ -21,3 +21,14 @@ int	ft_strcmp(char *s1, char *s2)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+
+#include <stdio.h>
+int main(int ac, char **av)
+{
+	if (ac != 3) {
+		fprintf(stderr, "Ex: ./ft_strcmp life good");
+		return 1;
+	}
+	printf("ft_strcmp(\"%s\", \"%s\") = %d\n", av[1], av[2], ft_strcmp(av[1], av[2]));
+	return 0;
+}

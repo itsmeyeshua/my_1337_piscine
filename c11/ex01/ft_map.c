@@ -28,3 +28,27 @@ int	*ft_map(int *tab, int length, int (*f)(int))
 	}
 	return (res);
 }
+
+
+#include <stdio.h>
+int	square(int n)
+{
+	return (n * n);
+}
+
+int	main(void)
+{
+	int	tab[] = {1, 2, 3, 4, 5};
+	int	length = 5;
+	int	i;
+	int	*res;
+
+	res = ft_map(tab, length, &square);
+	if (!res)
+		return (1);
+	for (i = 0; i < length; i++)
+		printf("%d ", res[i]);
+	printf("\n");
+	free(res);
+	return (0);
+}

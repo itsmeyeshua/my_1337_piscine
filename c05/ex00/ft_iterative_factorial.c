@@ -28,3 +28,12 @@ int	ft_iterative_factorial(int nb)
 	}
 	return (num);
 }
+
+
+#include <stdio.h>
+int main(void)
+{
+	for (int i = -1; i <= 5; i++)
+		printf("ft_iterative_factorial(%d) = %d\n", i, ft_iterative_factorial(i));
+	return 0;
+}

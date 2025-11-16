@@ -37,3 +37,28 @@ void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
 		i++;
 	}
 }
+
+#include <stdio.h>
+int	str_cmp(char *s1, char *s2)
+{
+	int i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
+}
+
+int	main(int ac, char **av)
+{
+	if (ac < 2) {
+		fprintf(stderr, "Ex: ./ft_advanced_sort_string_tab zakaria guellouch");
+		return 1;
+	}
+	char **tab = &av[1];
+	int i = 0;
+
+	ft_advanced_sort_string_tab(tab, &str_cmp);
+	while (tab[i])
+		printf("%s\n", tab[i++]);
+	return (0);
+}
+

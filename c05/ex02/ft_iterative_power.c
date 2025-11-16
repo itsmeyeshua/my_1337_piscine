@@ -28,3 +28,14 @@ int	ft_iterative_power(int nb, int power)
 	}
 	return (nb);
 }
+
+
+#include <stdio.h>
+int main(void)
+{
+	printf("2^0 = %d\n", ft_iterative_power(2, 0));
+	printf("2^3 = %d\n", ft_iterative_power(2, 3));
+	printf("5^4 = %d\n", ft_iterative_power(5, 4));
+	printf("2^-2 = %d\n", ft_iterative_power(2, -2));
+	return 0;
+}

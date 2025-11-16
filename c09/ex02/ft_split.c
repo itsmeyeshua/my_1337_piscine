@@ -90,12 +90,24 @@ char	**ft_split(char *str, char *charset)
 	return (strs);
 }
 
-// #include <stdio.h>
-// int main(int ac, char **av)
-// {
-// 	int i;
-// 	i = 0;
-// 	char **split = ft_split(av[1], av[2]);
-// 	while (split[i])
-// 		printf("%s\n", split[i++]);
-// }
+#include <stdio.h>
+int main(int ac, char **av)
+{
+	if (ac != 3) {
+		fprintf(stderr, "Ex: ./ft_split \"Hello,42World,Split,This\" \",\"\n");
+		return 1;
+	}
+    char *text = av[1];
+    char *sep = av[2];
+    char **split = ft_split(text, sep);
+
+    if (split)
+    {
+        for (int i = 0; split[i]; i++)
+            printf("Word %d: %s\n", i, split[i]);
+        for (int i = 0; split[i]; i++)
+            free(split[i]);
+        free(split);
+    }
+    return 0;
+}

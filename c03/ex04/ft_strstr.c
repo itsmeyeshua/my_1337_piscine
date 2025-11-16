@@ -36,3 +36,23 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
+
+#include <stdio.h>
+int main(int ac, char **av)
+{
+	if (ac != 3) {
+		fprintf(stderr, "Ex: ./ft_strstr \"Once you're 1337, you can't go back\" 13");
+		return 1;
+	}
+
+	char *res = ft_strstr(av[1], av[2]);
+	if (res)
+		printf("\"%s\" is in \"%s\"\n", av[2], av[1]);
+	else {
+		printf("\"%s\" is not in \"%s\"\n", av[2], av[1]);
+		return 1;
+	}
+
+
+	return 0;
+}

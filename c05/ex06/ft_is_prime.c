@@ -25,3 +25,12 @@ int	ft_is_prime(int nb)
 	}
 	return (1);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	int numbers[] = {-1, 0, 1, 2, 3, 4, 5, 16, 17};
+	for (int i = 0; i < 9; i++)
+		printf("ft_is_prime(%d) = %d\n", numbers[i], ft_is_prime(numbers[i]));
+	return 0;
+}

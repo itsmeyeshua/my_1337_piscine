@@ -32,3 +32,20 @@ char	*ft_strdup(char *src)
 	}
 	return (str);
 }
+
+#include <stdio.h>
+int main(void)
+{
+    char *original = "Hello, World!";
+    char *copy = ft_strdup(original);
+
+    if (copy)
+    {
+        printf("Original: %s\n", original);
+        printf("Copy: %s\n", copy);
+        free(copy);
+    }
+    else
+        printf("Memory allocation failed\n");
+    return 0;
+}

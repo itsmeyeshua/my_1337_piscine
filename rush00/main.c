@@ -50,10 +50,10 @@ int	main(int ac, char **av)
 		a = ft_atoll(av[1]);
 		b = ft_atoll(av[2]);
 		if (check_num(a, b) == 0)
-			return (0);
+			return (1);
 		rush(a, b);
 		return (0);
 	}
-	write(2, "You must enter 2 arguments.\n", 28);
-	return (0);
+	write(2, "Ex: ./rushXX 6 9\n", 18);
+	return (1);
 }

@@ -20,3 +20,17 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	*a = *a / *b;
 	*b = tmp;
 }
+
+#include <stdio.h>
+int main()
+{
+	int a = 13;
+	int b = 37;
+
+	ft_ultimate_div_mod(&a, &b);
+
+	printf("Div is %d\n", a);
+	printf("Mod is %d\n", b);
+
+	return 0;
+}

@@ -89,14 +89,23 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	return (result);
 }
 
-// #include <stdio.h>
-// int main(void)
-// {
-//    char *strs[] = {"hello,", "world", "oussama", "i love YOU"};
-//     int size = 4;
-//     char *sep = " / ";
-//     char *result = ft_strjoin(size, strs, sep);
-//     printf("%s\n", result);
-//    free(result);
-//     return (0);
-// }
+#include <stdio.h>
+int main(int ac, char **av)
+{
+	if (ac < 3)
+	{
+		fprintf(stderr, "Ex: ./ft_strjoin life is good \" - \"");
+		return 1;
+	}
+    char *sep = av[ac - 1];
+	av[ac - 1] = NULL;
+    char **strs = &av[1];
+    char *result = ft_strjoin(ac - 2, strs, sep);
+
+    if (result)
+    {
+        printf("%s\n", result);
+        free(result);
+    }
+    return 0;
+}

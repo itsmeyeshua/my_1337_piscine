@@ -35,19 +35,25 @@ int	ft_ultimate_range(int **range, int min, int max)
 	}
 	return (size);
 }
-//#include <stdio.h>
-//int main(void)
-//{
-//	int	min = 5;
-//	int	max = 10;
-//	int	*tab;
-//	int **range = &tab;
-//	int	size;
-//	int	i = 0;
-//	size = ft_ultimate_range(range, min, max);
-//	while(i < size)
-//	{
-//		printf("%d, ", tab[i]);
-//		i++;
-//	}
-//}
+
+#include <stdio.h>
+int main(void)
+{
+    int *tab;
+    int **range = &tab;
+    int min = 3;
+    int max = 8;
+    int size = ft_ultimate_range(range, min, max);
+
+    if (size > 0)
+    {
+        for (int i = 0; i < size; i++)
+            printf("%d ", tab[i]);
+        printf("\n");
+        free(tab);
+    }
+    else
+        printf("Empty or invalid range\n");
+    return 0;
+}
+

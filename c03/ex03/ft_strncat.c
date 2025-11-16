@@ -24,3 +24,15 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	dest[i] = '\0';
 	return (dest);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	char str1[50] = "Hello, ";
+	char str2[] = "World!";
+
+	printf("Before strncat: %s\n", str1);
+	ft_strncat(str1, str2, 3);
+	printf("After strncat : %s\n", str1);
+	return 0;
+}

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void	ft_swap(int *a, int *b)
 {
@@ -19,4 +20,14 @@ void	ft_swap(int *a, int *b)
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
+}
+
+int main() {
+	int a = 13;
+	int b = 37;
+
+	printf("Before ft_swap() :\nab = %d%d\n\n", a, b);
+
+	ft_swap(&a, &b);
+	printf("After ft_swap() :\nab = %d%d", a, b);
 }

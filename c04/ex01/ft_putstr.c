@@ -23,3 +23,20 @@ void	ft_putstr(char *str)
 		size++;
 	write(1, str, size);
 }
+
+
+#include <stdio.h>
+int main(int ac, char **av)
+{
+	if (ac < 2) {
+		fprintf(stderr, "Ex: ./ft_putstr s1 s2 s3\n");
+		return 1;
+	}
+
+	for (int i = 1; av[i]; i++) {
+		ft_putstr(av[i]);
+		write(1, "\n", 1);
+	}
+
+	return 0;
+}

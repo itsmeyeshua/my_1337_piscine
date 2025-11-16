@@ -22,3 +22,11 @@ int	ft_str_is_printable(char *str)
 	else
 		return (0);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	printf("\"Hello!\" is printable? %d\n", ft_str_is_printable("Hello!"));
+	printf("\"Hello\x01\" is printable? %d \n", ft_str_is_printable("Hello\x01"));
+	return 0;
+}

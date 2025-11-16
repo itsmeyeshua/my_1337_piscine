@@ -44,3 +44,15 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (str);
 }
+
+#include <stdio.h>
+int main(int ac, char **av)
+{
+	if (ac < 2) {
+		fprintf(stderr, "Ex: ./ft_strcapitalize string1 string2");
+		return 1;
+	}
+	for (int i = 1; av[i]; i++)
+		printf("%s\n", ft_strcapitalize(av[i]));
+	return 0;
+}

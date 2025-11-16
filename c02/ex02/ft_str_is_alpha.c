@@ -22,3 +22,11 @@ int	ft_str_is_alpha(char *str)
 	else
 		return (0);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	printf("\"Hello\"   is alpha? %d\n", ft_str_is_alpha("Hello"));
+	printf("\"Hello42\" is alpha? %d\n", ft_str_is_alpha("Hello42"));
+	return 0;
+}

@@ -121,11 +121,19 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	return (result);
 }
 
-//#include <stdio.h>
-//int	main(int ac, char **av)
-//{
-//	(void) ac;
-// 	char *str = ft_convert_base(av[1], av[2], av[3]);
-// 	printf("%s\n", str);
-// 	return 0;
-//}
+#include <stdio.h>
+int main(int ac, char **av)
+{
+	if (ac != 4) {
+		fprintf(stderr, "Ex: ./ft_convert_base 101010 01 0123456789");
+		return 1;
+	}
+
+    char *converted = ft_convert_base(av[1], av[2], av[3]);
+    if (converted)
+    {
+        printf("%s in base %s is %s in base %s\n", av[1], av[2], converted, av[3]);
+        free(converted);
+    }
+    return 0;
+}

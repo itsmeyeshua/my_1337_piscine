@@ -50,3 +50,9 @@ void	ft_print_combn(int n)
 		print_array(arr, n, arr_max[0]);
 	}
 }
+
+int main()
+{
+	ft_print_combn(2);
+	return 0;
+}

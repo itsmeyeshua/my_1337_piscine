@@ -92,3 +92,26 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 	write_arr(arr, i);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	write(1, "42 in binary: ", 15);
+	ft_putnbr_base(42, "01");
+	write(1, "\n", 1);
+
+	write(1, "-42 in decimal: ", 17);
+	ft_putnbr_base(-42, "0123456789");
+	write(1, "\n", 1);
+
+	write(1, "255 in hexadecimal: ", 21);
+	ft_putnbr_base(255, "0123456789ABCDEF");
+	write(1, "\n", 1);
+
+	write(1, "1234 in custom base 'abcdefgh': ", 33);
+	ft_putnbr_base(1234, "abcdefgh");
+	write(1, "\n", 1);
+
+	return 0;
+}
+

@@ -23,3 +23,13 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+
+#include <stdio.h>
+int main(void)
+{
+	printf("strncmp(\"Hello\", \"Hello\", 3) = %d\n", ft_strncmp("Hello", "Hello", 3));
+	printf("strncmp(\"Hello\", \"Hell\", 5) = %d\n", ft_strncmp("Hello", "Hell", 5));
+	printf("strncmp(\"Hell\", \"Hello\", 2) = %d\n", ft_strncmp("Hell", "Hello", 2));
+	printf("strncmp(\"Hello\", \"World\", 0) = %d\n", ft_strncmp("Hello", "World", 0));
+	return 0;
+}

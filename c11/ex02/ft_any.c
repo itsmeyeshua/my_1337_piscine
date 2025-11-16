@@ -25,3 +25,26 @@ int	ft_any(char **tab, int (*f)(char*))
 	}
 	return (0);
 }
+
+#include <stdio.h>
+int	has_a(char *s)
+{
+	int i = 0;
+	while (s[i])
+	{
+		if (s[i] == 'a')
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+int	main(void)
+{
+	char *tab[] = {"hello", "world", "abc", NULL};
+	int res;
+
+	res = ft_any(tab, &has_a);
+	printf("%d\n", res);
+	return (0);
+}

@@ -18,3 +18,11 @@ int	ft_recursive_factorial(int nb)
 		return (1);
 	return (nb * ft_recursive_factorial(nb - 1));
 }
+
+#include <stdio.h>
+int main(void)
+{
+	for (int i = -1; i <= 5; i++)
+		printf("ft_recursive_factorial(%d) = %d\n", i, ft_recursive_factorial(i));
+	return 0;
+}

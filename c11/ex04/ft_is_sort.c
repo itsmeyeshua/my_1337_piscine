@@ -37,3 +37,21 @@ int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 	}
 	return (1);
 }
+
+
+#include <stdio.h>
+int	cmp(int a, int b)
+{
+	return (a - b);
+}
+
+int	main(void)
+{
+	int	tab1[] = {1, 2, 3, 4, 5};
+	int	tab2[] = {5, 4, 10, 2, 1};
+	int	length = 5;
+
+	printf("[1, 2, 3, 4, 5]  is sorted? %d\n", ft_is_sort(tab1, length, &cmp));
+	printf("[5, 4, 10, 2, 1] is sorted ? %d\n", ft_is_sort(tab2, length, &cmp));
+	return (0);
+}
