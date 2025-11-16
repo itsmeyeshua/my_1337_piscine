@@ -14,7 +14,7 @@ It also includes **rush00**, a collaborative weekend project where I worked in a
 ## Highlights by Day
 
 - **c00** : Basics: Writing characters, alphabets, numbers, and simple combinatorial functions
-- **c01** : Pointers & functions: Working with pointers, swapping, string lengths, and array manipulations
+- **c01** : Pointers & functions: Working with pointers, swapping, string lengths, and array manipulations++
 - **c02** : Strings: Copying, modifying, and analyzing strings, handling special characters
 - **c03** : String operations: Comparing, concatenating, and searching strings
 - **c04** : Advanced basics: Implementing `atoi`, number printing, and base conversions
